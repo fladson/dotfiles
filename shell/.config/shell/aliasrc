@@ -1,0 +1,96 @@
+#!/bin/sh
+alias \
+  cp="cp -iv" \
+  mv="mv -iv" \
+  rm="rm -iv" \
+  ber="bundle exec rspec" \
+  mkd="mkdir -pv" \
+  magit="nvim -c MagitOnly" \
+  grep="grep --color=auto" \
+  diff="diff --color=auto" \
+  ccat="highlight --out-format=ansi" \
+  theme="cd ~/.config/kitty/base16-colors && fzf --preview "head -n 100 {} && kitty @ set-colors -a {}"; cd -" \
+  kitty_color="\ls ~/.config/kitty/base16-colors | fzf | xargs -I {} kitty @ set-colors -a "~/.config/kitty/base16-colors/{}"" \
+  kitty_color2="\ls ~/.config/kitty/kitty-themes/themes | fzf | xargs -I {} kitty @ set-colors -a "~/.config/kitty/kitty-themes/themes/{}"" \
+
+## kubectl
+alias k='kubectl'
+alias kc='kubectx "$(kubectx | fzf --height=10%)"'
+alias kn='kubens "$(kubens | fzf --height=10%)"'
+alias kd='k describe'
+alias kd!='kd --all-namespaces'
+alias kdp='kd pod'
+alias kdel='k delete'
+alias ke='k exec -ti'
+alias kg='k get'
+alias kg!='kg --all-namespaces'
+alias kgd='kg deployment'
+alias kgd!='kgd --all-namespaces'
+alias kgp='kg pod'
+alias kgp!='kgp --all-namespaces'
+alias kgs='kg service'
+alias kgs!='kgs --all-namespaces'
+alias kl='kubectl logs -f'
+
+## git
+alias g='_f() { if [[ $# == 0 ]]; then git status --short; else git "$@"; fi }; _f'
+alias ga='git add'
+alias gaa='git add --all'
+alias gap='git add -p'
+alias gb='git branch'
+alias gba='git branch --all'
+alias gbd='git branch -D'
+alias gbda='git branch --no-color --merged | command grep -vE "^(\*|\s*(master|develop|dev)\s*$)" | command xargs -n 1 git branch -d'
+alias gbsb='git bisect bad'
+alias gbsg='git bisect good'
+alias gbsr='git bisect reset'
+alias gbss='git bisect start'
+alias gc='git commit -v'
+alias gc!='git commit -v --amend'
+alias gcn!='git commit --no-edit --amend'
+alias gac='git add --all && git commit -v'
+alias gac!='git add --all && git commit -v --amend'
+alias gacn!='git add --all && git commit --amend --no-edit'
+alias gacm='git add --all && git commit -m'
+alias gcm='git commit -m'
+alias gcf='git commit --fixup'
+alias gcfh='git commit --fixup HEAD'
+alias gacf='git add --all && git commit --fixup'
+alias gacfh='git add --all && git commit --fixup HEAD'
+alias gco='git checkout'
+alias gcom='git checkout master'
+alias gcob='git checkout -b'
+alias gcop='git checkout -p'
+alias gcp='git cherry-pick'
+alias gcpa='git cherry-pick --abort'
+alias gcpc='git cherry-pick --continue'
+alias gd='git diff'
+alias gds='git diff --cached'
+alias gd!='git difftool -d'
+alias gds!='git difftool -d --cached'
+alias gf='git fetch --tags'
+alias gl='git pull --tags -f --rebase --autostash'
+alias glog="git log --graph --pretty='%Cred%h%Creset%C(yellow)%d%Creset %s %Cgreen(%cr) %C(blue)<%an>%Creset' --abbrev-commit"
+alias gloga="git log --graph --pretty='%Cred%h%Creset%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --all"
+alias glogp='git log -p'
+alias gm='git merge'
+alias gma='git merge --abort'
+alias gp='git push -u'
+alias gpf='git push --force-with-lease'
+alias gpf!='git push --force'
+alias gra='git remote add'
+alias grr='git remote remove'
+alias grv='git remote -v'
+alias grba='git rebase --abort'
+alias grbc='git rebase --continue'
+alias grbi='git rebase -i'
+alias grbm='git rebase -i master'
+alias grbom='git rebase -i origin/master'
+alias gr='git reset'
+alias gr!='git reset --hard'
+alias grh='git reset HEAD'
+alias grh!='git reset --hard HEAD'
+alias garh!='git add --all && git reset --hard HEAD'
+alias gs='git show --show-signature'
+alias gss='git status -sb'
+alias gst='git status'
