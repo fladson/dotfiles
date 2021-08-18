@@ -1,0 +1,29 @@
+[user]
+  name = Fladson Gomes
+  email = fladsonthiago@gmail.com
+  signingkey = 251C5ABF024108BB
+[gpg]
+  program = /usr/local/bin/gpg
+[filter "lfs"]
+  clean = git-lfs clean -- %f
+  smudge = git-lfs smudge -- %f
+  process = git-lfs filter-process
+  required = true
+[color]
+  ui = auto
+[core]
+  excludesfile = ~/.gitignore
+  autocrlf = input
+[merge]
+[commit]
+  template = ~/.gitmessage
+[fetch]
+  prune = true
+[rebase]
+  autosquash = true
+[diff]
+  colorMoved = zebra
+[web]
+	browser = open
+[init]
+	defaultBranch = main
