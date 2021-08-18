@@ -1,2 +1,2 @@
 # dotfiles
-config files
+To restore everything `stow --restow */`
