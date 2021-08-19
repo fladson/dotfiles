@@ -84,6 +84,16 @@ tnoremap <leader><Esc> <C-\><C-n>
 " nnoremap <leader>t <cmd>vnew term://zsh<CR>
 " nnoremap <leader>x <cmd>split term://zsh | resize 10<CR>
 nnoremap <leader>p Orequire 'pry';binding.pry<esc>
+nnoremap <silent> Q <nop>
+nnoremap <Leader><CR> :so ~/.config/nvim/init.vim<CR>
+vnoremap <leader>d "_d
+nmap <silent> <leader>/ :nohlsearch<CR>
+map <leader>sr :%s///<left><left>
+map <leader>i mmgg=G'm
+
+nnoremap <leader>vwh :h <C-R>=expand("<cword>")<CR><CR>
+nnoremap <leader>bs /<C-R>=escape(expand("<cWORD>"), "/")<CR><CR>
+nnoremap <leader>s :%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>
 
 nnoremap <leader>f <cmd>Telescope find_files theme=get_ivy<CR>
 nnoremap <leader>b <cmd>Telescope buffers theme=get_ivy<CR>
@@ -139,10 +149,6 @@ nmap <silent> t<C-f> :TestFile<CR>
 nmap <silent> t<C-s> :TestSuite<CR>
 nmap <silent> t<C-l> :TestLast<CR>
 nmap <silent> t<C-g> :TestVisit<CR>
-
-nmap <silent> <leader>/ :nohlsearch<CR>
-map <leader>sr :%s///<left><left>
-map <leader>i mmgg=G'm
 
 function! NumberToggle()
   if(&rnu == 1)
