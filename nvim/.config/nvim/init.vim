@@ -57,7 +57,7 @@ let g:nvim_tree_indent_markers = 1
 let g:nvim_tree_highlight_opened_files = 1
 let g:nvim_tree_disable_netrw = 0
 let g:nvim_tree_follow = 1
-let g:nvim_tree_ignore = [ '.git', 'node_modules', '.cache' ]
+let g:nvim_tree_ignore = [ '.DS_Store', '.git', 'node_modules', '.cache' ]
 let g:nvim_tree_show_icons = {
     \ 'git': 0,
     \ 'folders': 1,
