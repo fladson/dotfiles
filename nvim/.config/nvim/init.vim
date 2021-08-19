@@ -1,14 +1,5 @@
 lua require("config")
 
-lua require("treesitter")
-lua require("_devicons")
-lua require("completion")
-lua require("lsp")
-lua require("_telescope")
-lua require("buffer")
-lua require("_statusline")
-lua require("_gitsigns")
-
 set clipboard+=unnamedplus " use system clipboard
 set number                 " line number
 set relativenumber         " relative line number

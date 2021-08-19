@@ -1,1 +1,10 @@
 require("config.plugins")
+
+require("config.bufferline")
+require("config.completion")
+require("config.devicons")
+require("config.gitsigns")
+require("config.lsp")
+require("config.statusline")
+require("config.telescope")
+require("config.treesitter")
