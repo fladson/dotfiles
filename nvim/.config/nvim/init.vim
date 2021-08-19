@@ -1,4 +1,5 @@
-lua require("plugins")
+lua require("config")
+
 lua require("treesitter")
 lua require("_devicons")
 lua require("completion")
