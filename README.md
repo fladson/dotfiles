@@ -1,4 +1,7 @@
 # dotfiles
+<p align="center">
+  <img src="screenshot.png">
+</p>
 To restore everything `stow --restow */`
 
 ## brew
