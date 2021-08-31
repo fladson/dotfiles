@@ -45,7 +45,7 @@ set termguicolors
 set background=dark
 " colorscheme base16-tomorrow-night
 " lua require('base16.themes')['tomorrow-night']:apply()
-lua require("nosdalf")
+lua require("colors.nosdalf")
 
 " kitty navigation
 " let g:kitty_navigator_listening_on_address = 'unix:/tmp/kitty.sock'

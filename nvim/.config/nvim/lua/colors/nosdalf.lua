@@ -1,61 +1,34 @@
 local M = {}
-M._colors = {
-  red = '#F9867B',
-  orange = '#CD9731',
-  yellow = '#FDCE68',
-  green = '#A3EEA0',
-  cyan = '#6796E6',
-  blue = '#7BE2F9',
-  purple = '#E19EF5',
-  tomato = '#F44747',
-  white = '#FFFFFF',
-
-  background = '#212835',
-  dark_background = '#1B212C',
-
-  border = '#3E4451',
-  comment = '#5C6370',
-  lineNumber = '#495162',
-  scrollbar = '#4E5666',
-  cursorLine = '#2C313A',
-  indent = '#383C44',
-}
+M.colors = require('colors.dark')
+-- M.colors = require('colors.light')
 
 -- onenord
-M.colors = {
-  base0A = "#EBCB8B",
-  base04 = "#566074",
-  base07 = "#ced4df",
-  base05 = "#bfc5d0",
-  base0E = "#B48EAD",
-  base0D = "#81A1C1",
-  base0C = "#97b7d7",
-  base0B = "#A3BE8C",
-  base02 = "#434C5E",
-  base0F = "#BF616A",
-  base03 = "#4C566A",
-  base08 = "#ba5c65",
-  base01 = "#3B4252",
-  base00 = "#2E3440",
-  base09 = "#D08770",
-  base06 = "#c7cdd8"
-}
+-- M.colors = {
+--   base0A = "#EBCB8B",
+--   base04 = "#566074",
+--   base07 = "#ced4df",
+--   base05 = "#bfc5d0",
+--   base0E = "#B48EAD",
+--   base0D = "#81A1C1",
+--   base0C = "#97b7d7",
+--   base0B = "#A3BE8C",
+--   base02 = "#434C5E",
+--   base0F = "#BF616A",
+--   base03 = "#4C566A",
+--   base08 = "#ba5c65",
+--   base01 = "#3B4252",
+--   base00 = "#2E3440",
+--   base09 = "#D08770",
+--   base06 = "#c7cdd8"
+-- }
 
--- schemer
-M.colors = {
-    base00 = '#16161D', base01 = '#3e4451', base02 = '#2c313c', base03 = '#565c64',
-    base04 = '#6c7891', base05 = '#abb2bf', base06 = '#9a9bb3', base07 = '#c5c8e6',
-    base08 = '#e06c75', base09 = '#d19a66', base0A = '#e5c07b', base0B = '#98c379',
-    base0C = '#56b6c2', base0D = '#0184bc', base0E = '#c678dd', base0F = '#a06949',
-}
-
--- tomorrow night
-M.colors = {
-  base00 = '#1d1f21', base01 = '#282a2e', base02 = '#373b41', base03 = '#969896',
-  base04 = '#b4b7b4', base05 = '#c5c8c6', base06 = '#e0e0e0', base07 = '#ffffff',
-  base08 = '#cc6666', base09 = '#de935f', base0A = '#f0c674', base0B = '#b5bd68',
-  base0C = '#8abeb7', base0D = '#81a2be', base0E = '#b294bb', base0F = '#a3685a'
-}
+-- -- schemer
+-- M.colors = {
+--     base00 = '#16161D', base01 = '#3e4451', base02 = '#2c313c', base03 = '#565c64',
+--     base04 = '#6c7891', base05 = '#abb2bf', base06 = '#9a9bb3', base07 = '#c5c8e6',
+--     base08 = '#e06c75', base09 = '#d19a66', base0A = '#e5c07b', base0B = '#98c379',
+--     base0C = '#56b6c2', base0D = '#0184bc', base0E = '#c678dd', base0F = '#a06949',
+-- }
 
 M.highlight = setmetatable({}, {
   __newindex = function(_, hlgroup, args)
@@ -74,7 +47,6 @@ if vim.fn.exists('syntax_on') then
   vim.cmd('syntax reset')
 end
 vim.cmd('set termguicolors')
-vim.cmd('set background=dark')
 
 -- Vim editor colors
 hi.Normal       = { guifg = M.colors.base05, guibg = M.colors.base00, gui = nil,    guisp = nil }
