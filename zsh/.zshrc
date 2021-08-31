@@ -104,6 +104,7 @@ setopt no_auto_menu  # require an extra TAB press to open the completion menu
 
 export EDITOR='nvim'
 export VISUAL='nvim'
+export LC_ALL='en_US.UTF-8'
 export BAT_THEME='base16'
 export FZF_DEFAULT_OPTS='--reverse --multi'
 export KITTY_DEVELOP_FROM='/Users/fladson/Dev/kitty'
