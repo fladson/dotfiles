@@ -1,0 +1,4 @@
+#!/bin/bash
+sed -i '' '2 s/light/dark/' ~/.config/nvim/lua/colors/nosdalf.lua
+kitty +kitten themes --reload-in=none --dump-theme Tomorrow Night 2 > ~/.config/kitty/current-theme.conf
+echo "run cmd+control+, to reload the config" 
