@@ -139,6 +139,10 @@ nmap <silent> t<C-s> :TestSuite<CR>
 nmap <silent> t<C-l> :TestLast<CR>
 nmap <silent> t<C-g> :TestVisit<CR>
 
+" don't move the cursor after a visual yank
+vnoremap y myy`y
+vnoremap Y myY`y
+
 function! NumberToggle()
   if(&rnu == 1)
     set nornu
