@@ -8,35 +8,25 @@ set noswapfile
 set nobackup
 set nowritebackup
 set splitbelow splitright
-set hidden                 " do not unload buffers when abandoned
 set textwidth=80           " break line automatically if more than 80 chars (insert)
 set colorcolumn=79         " line break guide
 set spelllang=en
-set undodir=~/.config/nvim/undodir
-set undofile
 set noshowmode             " don't show the mode
 set completeopt=menuone,noinsert,noselect
 set nowrap                 " don't break long lines (normal mode)
 set scrolloff=8
 set shortmess+=c
 set cursorline
-" incremental live completion
-set inccommand=nosplit
-set fillchars=vert:│
+set inccommand=nosplit     " incremental live completion
 set timeoutlen=500 ttimeoutlen=0
 set updatetime=10
 set list listchars=tab:»\ ,trail:·,eol:¬,extends:>,precedes:<,nbsp:+
-"set guicursor=
 
 " search
-set hlsearch
-set incsearch
 set ignorecase smartcase
 
 " indentation
 set expandtab
-set smarttab
-set smartindent
 set linespace=2 shiftwidth=2 softtabstop=2 tabstop=2
 
 " color related
@@ -79,23 +69,20 @@ autocmd BufWritePost plugins.lua PackerCompile
 " -- remaps
 let mapleader = " "
 nnoremap c* *Ncgn
-nmap Q <Nop>
 nnoremap <leader><leader> <c-^>
 nnoremap <leader>w :w<CR>
 tnoremap <leader><Esc> <C-\><C-n>
 " nnoremap <leader>t <cmd>vnew term://zsh<CR>
 " nnoremap <leader>x <cmd>split term://zsh | resize 10<CR>
 nnoremap <leader>p Orequire 'pry';binding.pry<esc>
-nnoremap <silent> Q <nop>
 nnoremap <Leader><CR> :so ~/.config/nvim/init.vim<CR>
 vnoremap <leader>d "_d
 nmap <silent> <leader>/ :nohlsearch<CR>
-map <leader>sr :%s///<left><left>
 map <leader>i mmgg=G'm
 
 nnoremap <leader>vwh :h <C-R>=expand("<cword>")<CR><CR>
-nnoremap <leader>bs /<C-R>=escape(expand("<cWORD>"), "/")<CR><CR>
 nnoremap <leader>s :%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>
+map <leader>sr :%s///<left><left>
 
 nnoremap <leader>f <cmd>Telescope find_files theme=get_ivy<CR>
 nnoremap <leader>b <cmd>Telescope buffers theme=get_ivy<CR>
