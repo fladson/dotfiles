@@ -1,5 +1,6 @@
 require("config.plugins")
 
+require("config.tree")
 require("config.bufferline")
 require("config.completion")
 require("config.devicons")
