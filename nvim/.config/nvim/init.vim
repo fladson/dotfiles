@@ -42,13 +42,9 @@ lua require("colors.nosdalf")
 let g:kitty_navigator_listening_on_address = 'unix:/tmp/mykitty'
 
 " nvim-tree
-let g:nvim_tree_side = "right"
-let g:nvim_tree_auto_close = 0
 let g:nvim_tree_quit_on_open = 1
 let g:nvim_tree_indent_markers = 1
 let g:nvim_tree_highlight_opened_files = 1
-let g:nvim_tree_disable_netrw = 0
-let g:nvim_tree_follow = 1
 let g:nvim_tree_ignore = [ '.DS_Store', '.git', 'node_modules', '.cache' ]
 let g:nvim_tree_show_icons = {
     \ 'git': 0,
