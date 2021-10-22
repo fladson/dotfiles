@@ -26,7 +26,6 @@ set linespace=2 shiftwidth=2 softtabstop=2 tabstop=2
 let &t_ut="" " kitty recommendation for background issues
 set termguicolors
 set background=dark
-" colorscheme base16-tomorrow-night
 " lua require('base16.themes')['tomorrow-night']:apply()
 lua require("colors.nosdalf")
 
@@ -131,6 +130,10 @@ nmap <silent> t<C-g> :TestVisit<CR>
 " don't move the cursor after a visual yank
 vnoremap y myy`y
 vnoremap Y myY`y
+
+" better indentation
+vnoremap < <gv
+vnoremap > >gv
 
 function! NumberToggle()
   if(&rnu == 1)
