@@ -4,32 +4,25 @@ set clipboard+=unnamedplus " use system clipboard
 set number                 " line number
 set relativenumber         " relative line number
 set numberwidth=1          " decrease left padding
-set noswapfile
-set nobackup
-set nowritebackup
+set noswapfile nobackup nowritebackup
 set splitbelow splitright
 set textwidth=80           " break line automatically if more than 80 chars (insert)
 set colorcolumn=79         " line break guide
-set spelllang=en
 set noshowmode             " don't show the mode
 set completeopt=menuone,noinsert,noselect
 set nowrap                 " don't break long lines (normal mode)
+set sidescroll=8
 set scrolloff=8
-set shortmess+=c
+set shortmess+=c           " remove msgs from completion menu
 set cursorline
-set inccommand=nosplit     " incremental live completion
 set timeoutlen=500 ttimeoutlen=0
 set updatetime=10
 set list listchars=tab:»\ ,trail:·,eol:¬,extends:>,precedes:<,nbsp:+
-
-" search
 set ignorecase smartcase
-
-" indentation
 set expandtab
 set linespace=2 shiftwidth=2 softtabstop=2 tabstop=2
 
-" color related
+" color
 let &t_ut="" " kitty recommendation for background issues
 set termguicolors
 set background=dark
