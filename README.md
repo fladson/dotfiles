@@ -2,11 +2,13 @@
 <p align="center">
   <img src="screenshot.png">
 </p>
-To restore everything `stow --restow */`
 
-## brew
-To dump the brew file
-`brew bundle dump`
+## Install
 
-To install brew packages from file
+Clone this repo and run `stow */`
+
+### brew
 `brew bundle --file ~/Brewfile`
+
+To dump current packages:
+`brew bundle dump`
