@@ -27,7 +27,10 @@ let &t_ut="" " kitty recommendation for background issues
 set termguicolors
 set background=dark
 " lua require('base16.themes')['tomorrow-night']:apply()
-lua require("colors.nosdalf")
+" lua require("colors.nosdalf")
+lua require("colors.cat")
+colorscheme catppuccin
+
 
 " kitty navigation
 " let g:kitty_navigator_listening_on_address = 'unix:/tmp/kitty.sock'
@@ -37,7 +40,6 @@ let g:kitty_navigator_listening_on_address = 'unix:/tmp/mykitty'
 let g:nvim_tree_quit_on_open = 1
 let g:nvim_tree_indent_markers = 1
 let g:nvim_tree_highlight_opened_files = 1
-let g:nvim_tree_ignore = [ '.DS_Store', '.git', 'node_modules', '.cache' ]
 let g:nvim_tree_show_icons = {
     \ 'git': 0,
     \ 'folders': 1,
@@ -68,9 +70,18 @@ vnoremap <leader>d "_d
 nmap <silent> <leader>/ :nohlsearch<CR>
 map <leader>i mmgg=G'm
 
+nnoremap Y y$
+nnoremap n nzzzv
+nnoremap N Nzzzv
+
 nnoremap <leader>vwh :h <C-R>=expand("<cword>")<CR><CR>
 nnoremap <leader>s :%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>
 map <leader>sr :%s///<left><left>
+
+nnoremap <c-P> <cmd>lua require('fzf-lua').files()<CR>
+nnoremap <c-f> <cmd>lua require('fzf-lua').live_grep_resume()<CR>
+
+" nnoremap gg :term <CR> emacsclient -nw -e "(magit-status)" <CR>
 
 nnoremap <leader>f <cmd>Telescope find_files theme=get_ivy<CR>
 nnoremap <leader>b <cmd>Telescope buffers theme=get_ivy<CR>

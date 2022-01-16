@@ -31,6 +31,14 @@ return require("packer").startup(function()
   use "ddrscott/vim-side-search"
   use "wincent/ferret"
   use "rktjmp/lush.nvim"
+  use { 'ibhagwan/fzf-lua',
+    -- optional for icon support
+    requires = { 'kyazdani42/nvim-web-devicons' }
+  }
+  use({
+    "catppuccin/nvim",
+    as = "catppuccin"
+  })
   -- use "lukas-reineke/indent-blankline.nvim"
 
   -- colorscheme
