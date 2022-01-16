@@ -1,7 +1,9 @@
 [user]
   name = Fladson Gomes
   email = fladsonthiago@gmail.com
-  signingkey = 251C5ABF024108BB
+  signingkey = FAD05F7B1EA266AB
+[credential "https://github.com"]
+  helper = !/opt/homebrew/bin/gh auth git-credential
 [gpg]
   program = /usr/local/bin/gpg
 [filter "lfs"]
