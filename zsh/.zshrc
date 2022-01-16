@@ -23,7 +23,16 @@ export KITTY_DEVELOP_FROM='/Users/fladson/Dev/kitty'
 
 # Prompt overrides
 # Some git colors cannot be controled by exports.
-# TODO: List the needed changes here.
+#      local       meta='%f'     # default foreground
+#      local      clean='%2F'    # green foreground
+#      local   modified='%3F'    # yellow foreground
+#      local  untracked='%4F'    # blue foreground
+#      local conflicted='%1F'    # red foreground
+#      local stash='%9F'         # gray foreground
+#      local purple='%5F'        # purple foreground
+# res+="${purple}${(g::)POWERLEVEL9K_VCS_BRANCH_ICON}${branch//\%/%%}"
+# ≡42 if have stashes.
+# (( VCS_STATUS_STASHES        )) && res+=" ${stash}≡${VCS_STATUS_STASHES}"
 export POWERLEVEL9K_MULTILINE_FIRST_PROMPT_PREFIX=' '
 export POWERLEVEL9K_PROMPT_CHAR_OK_{VIINS,VICMD,VIVIS,VIOWR}_FOREGROUND=5
 export POWERLEVEL9K_PROMPT_CHAR_ERROR_{VIINS,VICMD,VIVIS,VIOWR}_FOREGROUND=1
