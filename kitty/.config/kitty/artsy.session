@@ -1,0 +1,7 @@
+new_tab gravity
+layout tall
+cd ~/Workspace/gravity
+launch nvim
+focus
+launch zsh
+launch "bundle exec rspec"
